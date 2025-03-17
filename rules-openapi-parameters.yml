@@ -151,16 +151,17 @@ rules:
       clear to consumers where they can configure their request
     message: Parameters Required Property MUST Be Set
     given: $.components.parameters.*
+    severity: error
     then:
       field: required
       function: truthy
-  openapi-components-parameters-required-requiredfo:
+  openapi-components-parameters-required-info:
     description: >-
       Providrequiredg an required property for parameters gets explicit about
       whether a parameter is required the path, query, or a header, makrequiredg
       it clear to consumers where they can configure their request.
     message: Parameters Required Property Is Set
-    severity: requiredfo
+    severity: info
     given: $.components.parameters.*
     then:
       field: required
